@@ -1,3 +1,5 @@
+// VARIABLES
+
 var buttons = document.querySelectorAll(".button");
 console.log([buttons]);
 
@@ -16,79 +18,66 @@ var inputVal = [];
 
 // FUNCTION = click event on operators + push button value to array & display on front-end
 
-  for (var i = 0; i<operators.length; i++){
+for (var i = 0; i < operators.length; i++) {
 
-    operators[i].addEventListener('click', function(event){
+  operators[i].addEventListener('click', function(event) {
 
-      console.log('You just clicked', event.target.value);
+    console.log('You just clicked', event.target.value);
 
-        inputVal.push(event.target.value);
+    inputVal.push(event.target.value);
 
-          inputResult.innerHTML=inputResult.innerHTML+event.target.value;
+    inputResult.innerHTML = inputResult.innerHTML + event.target.value;
 
-            var btnVal = this.innerHTML;
+    var btnVal = this.innerHTML;
 
-              console.log([btnVal]);
-});
+    console.log([btnVal]);
+  });
 }
 
 // FUNCTION = click event on buttons + push button value to array & display on front-end
 
-  for (var i = 0; i<buttons.length; i++){
+for (var i = 0; i < buttons.length; i++) {
 
-    buttons[i].addEventListener('click', function(event){
+  buttons[i].addEventListener('click', function(event) {
 
-      console.log('You just clicked', event.target.value);
+    console.log('You just clicked', event.target.value);
 
-        // inputVal.push(event.target.value);
+    // inputVal.push(event.target.value);
 
-          inputResult.innerHTML=inputResult.innerHTML+event.target.value;
+    inputResult.innerHTML = inputResult.innerHTML + event.target.value;
 
-            var btnVal = this.innerHTML;
+    var btnVal = this.innerHTML;
 
-              console.log([btnVal]);
-});
+    console.log([btnVal]);
+  });
 }
 
 // FUNCTION = calculate when = is clicked
-calculate[0].addEventListener('click',function(event){
+calculate[0].addEventListener('click', function(event) {
 
   console.log('You just clicked', event.target.value);
 
-    inputVal.unshift(inputResult.innerHTML);
+  inputVal.unshift(inputResult.innerHTML);
 
-    console.log([inputVal]);
+  console.log([inputVal]);
 
-      var resultString = inputVal[0];
+  var resultString = inputVal[0];
 
-      console.log(resultString);
+  console.log(resultString);
 
-        var result = eval(resultString);
+  var result = eval(resultString);
 
-          console.log(result);
+  console.log(result);
 
-          inputResult.innerHTML=result;
-        });
-
+  inputResult.innerHTML = result;
+});
 
 // FUNCTION = clear when C is clicked
 
-clear[0].addEventListener('click',function(event){
+clear[0].addEventListener('click', function(event) {
 
-            console.log('You just clicked clear', event.target.value);
+  console.log('You just clicked clear', event.target.value);
 
-            inputResult.innerHTML = "";
+  inputResult.innerHTML = "";
 
-          });
-
-// for (var i = 0; i<operators.length; i++){
-//
-//   operators[i].addEventListener('click', function(event){
-//
-//   console.log('You just clicked', event.target.value);
-//
-//   // inputVal.push(event.target.value);
-//
-//   console.log([inputVal]);
-// });
-// }
+});
